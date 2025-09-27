@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:15
+    container_name: ims-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: lehlohonolomona
+      POSTGRES_PASSWORD: lehlohonolomona1540
+      POSTGRES_DB: ims_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ims_data:/var/lib/postgresql/data
+
+volumes:
+  ims_data:

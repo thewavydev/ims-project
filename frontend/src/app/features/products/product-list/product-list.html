@@ -1,0 +1,18 @@
+<h2>Products</h2>
+<table>
+  <thead>
+    <tr><th>Name</th><th>Price</th><th>Qty</th><th>Actions</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products$ | async">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
+      <td>
+        <button (click)="edit(product)">Edit</button>
+        <button (click)="delete(product.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button routerLink="/add">Add Product</button>

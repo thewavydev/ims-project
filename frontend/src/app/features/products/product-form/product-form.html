@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="space-y-4">
+  <div>
+    <label class="block font-semibold mb-1">Name</label>
+    <input formControlName="name" class="border p-2 rounded w-full" />
+  </div>
+  <div>
+    <label class="block font-semibold mb-1">Price</label>
+    <input type="number" formControlName="price" class="border p-2 rounded w-full" />
+  </div>
+  <div>
+    <label class="block font-semibold mb-1">Quantity</label>
+    <input type="number" formControlName="quantity" class="border p-2 rounded w-full" />
+  </div>
+  <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">
+    Save
+  </button>
+</form>
