@@ -4,7 +4,40 @@ This is a full-stack Inventory Management System built with Angular (frontend) a
 
 ---
 
-
+Project Structure 
+ims-project/
+├── backend/
+│   ├── __pycache__/               
+│   ├── app.py                      # Flask app entrypoint
+│   ├── config.py                   # Configuration (DB, env variables)
+│   ├── models.py                   # SQLAlchemy models
+│   ├── routes.py                   # All Flask routes / endpoints
+│   ├── requirements.txt            # Python dependencies
+│   ├── Dockerfile                  # Docker setup for backend
+│   └── instance/                   # Optional: for SQLite or config overrides
+├── frontend/
+│   ├── angular.json
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── .gitignore
+│   ├── src/
+│   │   ├── main.ts
+│   │   ├── app/
+│   │   │   ├── app.component.ts
+│   │   │   ├── app.component.html
+│   │   │   ├── app.module.ts      # optional if standalone components used
+│   │   │   └── features/
+│   │   │       └── products/
+│   │   │           ├── product-list/
+│   │   │           │   ├── product-list.ts
+│   │   │           │   └── product-list.html
+│   │   │           └── product-form/
+│   │   │               ├── product-form.ts
+│   │   │               └── product-form.html
+│   │   └── assets/                # images, icons, styles
+│   └── node_modules/              # auto-generated, should be gitignored
+├── docker-compose.yml
+└── README.md
 ---
 
 ## Features
