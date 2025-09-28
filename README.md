@@ -34,6 +34,7 @@ git clone https://github.com/thewavydev/ims-project.git
 cd ims-project
 
 2. Run with Docker (Recommended)
+docker-compose up -build     
 This will start the backend, frontend, and database.
 
 Frontend: http://localhost:4200
