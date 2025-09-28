@@ -30,7 +30,7 @@ This is a full-stack Inventory Management System built with Angular (frontend) a
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/ims-project.git
+git clone https://github.com/thewavydev/ims-project.git
 cd ims-project
 
 2. Run with Docker (Recommended)
