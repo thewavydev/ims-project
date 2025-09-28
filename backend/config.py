@@ -1,7 +1,7 @@
 import os
 
-DB_USER = os.getenv("POSTGRES_USER", "ims_user")
-DB_PASS = os.getenv("POSTGRES_PASSWORD", "ims_pass")
+DB_USER = os.getenv("POSTGRES_USER", "lehlohonolomona")
+DB_PASS = os.getenv("POSTGRES_PASSWORD", "lehlohonolomona1540")
 DB_NAME = os.getenv("POSTGRES_DB", "ims_db")
 DB_HOST = os.getenv("DB_HOST", "localhost")  # if Flask inside Docker, use 'db'
 DB_PORT = os.getenv("DB_PORT", "5432")

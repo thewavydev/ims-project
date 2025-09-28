@@ -1,7 +1,8 @@
 version: "3.8"
+
 services:
   db:
-    image: postgres:15
+    image: postgres:18
     container_name: ims-postgres
     restart: always
     environment:
@@ -13,5 +14,19 @@ services:
     volumes:
       - ims_data:/var/lib/postgresql/data
 
+  web:
+    build: ./backend 
+    container_name: ims-flask
+    environment:
+      POSTGRES_USER: lehlohonolomona
+      POSTGRES_PASSWORD: lehlohonolomona1540
+      POSTGRES_DB: ims_db
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      - db  
+    ports:
+      - "5000:5000"
+
 volumes:
-  ims_data:
+  ims_data: {}

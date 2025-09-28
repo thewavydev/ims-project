@@ -2,14 +2,14 @@ import { Component, OnInit  } from '@angular/core';
 import { CommonModule, AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 import { ProductStateService, Product } from '../../../services/product-state.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, AsyncPipe],
+  imports: [CommonModule, AsyncPipe, RouterModule],
   templateUrl: './product-list.html',
 })
 export class ProductList implements OnInit {
@@ -23,7 +23,7 @@ export class ProductList implements OnInit {
   }
 
   edit(product: Product) {
-    this.router.navigate(['/edit', product.id]);
+    this.router.navigate(['/form', product.id]);
   }
 
   delete(id?: number) {
