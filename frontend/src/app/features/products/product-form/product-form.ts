@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+// import { RouterModule } from '@angular/router';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ProductStateService, Product } from '../../../services/product-state.service';
 
@@ -9,10 +10,10 @@ import { ProductStateService, Product } from '../../../services/product-state.se
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule // <-- ✅ must import this for [formGroup], formControlName etc.
+    ReactiveFormsModule,
+    RouterModule
   ],
   templateUrl: './product-form.html',
-  // styleUrls: ['./product-form.css'] // <-- should be plural `styleUrls`
 })
 export class ProductForm implements OnInit {
   form = new FormGroup({
