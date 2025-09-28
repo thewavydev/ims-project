@@ -13,9 +13,9 @@
     <table class="w-full ">
       <tbody>
         <tr class="w-full text-center h-14 odd:bg-white even:bg-gray-200" *ngFor="let product of products$ | async">
-          <td class="px-8">{{ product.name }}</td>
-          <td class="px-8">R {{ product.price }}</td>
-          <td class="px-8">{{ product.quantity }}</td>
+          <td class="px-14 text-center">{{ product.name }}</td>
+          <td class="px-14 text-center">R {{ product.price }}</td>
+          <td class="px-14 text-center">{{ product.quantity }}</td>
           <td class="flex gap-x-4 justify-center pl-4 items-center mt-2">
             <a [routerLink]="['/form', product.id]" class="bg-blue-500 text-white font-bold px-4 py-2 rounded-2xl" >Edit</a>
             <button class="bg-red-500 text-white font-bold px-4 py-2 rounded-2xl" (click)="delete(product.id)">

@@ -18,7 +18,6 @@ import { RouterModule, RouterOutlet, RouterLink } from '@angular/router';
         &copy; {{ currentYear }} IMS Project
         </div>
         </div>
-        
         <button (click)="toggleMenu()" class="h-12 bg-blue-500  py-4 px-2 text-white "><span class="material-symbols-outlined">menu</span></button>
         <div class="w-full px-20">
                 <div class="w-full flex place-items-center mt-8">
