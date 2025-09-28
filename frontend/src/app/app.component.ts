@@ -14,7 +14,7 @@ import { RouterModule, RouterOutlet, RouterLink } from '@angular/router';
         </div>
         <div class="w-1/2 justify-end text-right px-8">
             <a routerLink="/form" class="bg-blue-500 text-white px-4 py-2 rounded mb-4 inline-block">
-            Add Product
+                Add Product
             </a>
         </div>
     </div>
