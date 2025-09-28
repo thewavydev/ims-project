@@ -1,17 +1,25 @@
 <form [formGroup]="form" (ngSubmit)="submit()" class="space-y-4">
+  <div class="w-full">
+    <p class="text-md text-blue-500 font-bold">Add Product</p>
+  </div>
   <div>
     <label class="block font-semibold mb-1">Name</label>
     <input formControlName="name" class="border p-2 rounded w-full" />
   </div>
   <div>
     <label class="block font-semibold mb-1">Price</label>
-    <input type="number" formControlName="price" class="border p-2 rounded w-full" />
+    <input type="number" min="0" formControlName="price" class="border p-2 rounded w-full" />
   </div>
   <div>
     <label class="block font-semibold mb-1">Quantity</label>
-    <input type="number" formControlName="quantity" class="border p-2 rounded w-full" />
+    <input type="number" min="0" formControlName="quantity" class="border p-2 rounded w-full" />
   </div>
-  <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">
-    Save
-  </button>
+  <div class="flex justify-end gap-x-4">
+      <a routerLink="/" type="submit" class="bg-blue-500 w-32 text-center text-white px-4 py-2 rounded-2xl">
+        Cancel
+      </a>
+    <button type="submit" class="bg-blue-500 w-32 text-white px-4 py-2 rounded-2xl">
+      Save
+    </button>
+  </div>
 </form>

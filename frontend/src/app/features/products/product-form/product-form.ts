@@ -39,8 +39,8 @@ export class ProductForm implements OnInit {
         // fallback: reload if not in snapshot
         this.state.loadProducts();
         this.state.products$.subscribe(list => {
-          const p = list.find(x => x.id === id);
-          if (p) this.form.patchValue(p);
+          const product = list.find(x => x.id === id);
+          if (product) this.form.patchValue(product);
         });
       }
     }
