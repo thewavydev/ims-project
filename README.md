@@ -66,12 +66,16 @@ DELETE /api/products/<id> — Delete a product
 
 
 #State Management Strategy
-This application uses a service with a BehaviorSubject to manage the product list state. When a product is updated (via PUT) or deleted (via DELETE), the service updates the local BehaviorSubject directly instead of issuing a new GET request for all products.
+This application uses a service with a BehaviorSubject to manage the product list state.
+When a product is updated (via PUT) or deleted (via DELETE), the service updates the local
+BehaviorSubject directly instead of issuing a new GET request for all products.
 
 PUT (Update):
-After a successful update, the service maps over the current product array in the BehaviorSubject, replacing the updated product by ID with the new data from the response.
+After a successful update, the service maps over the current product array in the BehaviorSubject,
+replacing the updated product by ID with the new data from the response.
 
 DELETE:
 After a successful delete, the service filters out the deleted product by ID from the current BehaviorSubject value.
 
-This approach ensures the UI reflects changes instantly and reduces unnecessary API calls, keeping the frontend state in sync with the backend efficiently.
+This approach ensures the UI reflects changes instantly and reduces unnecessary API calls,
+keeping the frontend state in sync with the backend efficiently.
